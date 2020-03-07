@@ -1,9 +1,9 @@
 #!/bin/bash
 
-readonly AccentColorLight="A3DBE8"
-readonly AccentColorDark="004153"
-readonly GnomeShellCloseLight="CC0000"
-readonly GnomeShellCloseDark="820000"
+readonly AccentColorLight="004153"
+readonly AccentColorDark="A3DBE8"
+readonly GnomeShellCloseLight="820000"
+readonly GnomeShellCloseDark="CC0000"
 readonly GnomeShellFont="Cantarell" #comment lines 86&87 to use default
 readonly Path="/usr/share/themes"
 
