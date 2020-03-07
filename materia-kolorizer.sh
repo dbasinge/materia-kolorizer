@@ -1,15 +1,15 @@
 #!/bin/bash
 
-readonly ThemeName="MateriaK"
-readonly AccentColor="7952B3"
-readonly AltColor="7952B3"
-readonly GnomeShellClose="7952B3"
-readonly GnomeShellFont="Cantarell" #comment lines 90&91 to use default
+readonly AccentColorLight="A3DBE8"
+readonly AccentColorDark="004153"
+readonly GnomeShellCloseLight="CC0000"
+readonly GnomeShellCloseDark="820000"
+readonly GnomeShellFont="Cantarell" #comment lines 86&87 to use default
 readonly Path="/usr/share/themes"
 
 ### Some colors
-## Material Design palette -> https://material.io/guidelines/style/color.html#color-color-palette
-## Fluent Design palette -> https://docs.microsoft.com/en-us/windows/uwp/design/style/color#accent-color
+## Material Design palette -> https://www.materialui.co/colors
+## Fluent Design palette -> https://fluentcolors.com
 ## Arch blue = 1793D1
 ## Crunchbang dark = 2E3436
 ## Crunchbang light = BFBFBF
@@ -23,7 +23,8 @@ readonly Path="/usr/share/themes"
 ## Pop OS brown = 574F4A
 ## Pop OS cyan = 48B9C7
 ## Pop OS yellow = FAA41A
-## RedHat mediumred = A30000
+## RedHat lightred = CC0000
+## RedHat darkred = 820000
 ## RedHat lightblue = A3DBE8
 ## RedHat darkblue = 004153
 ## SteamOS green = 5C7E10
@@ -68,20 +69,13 @@ readonly Path="/usr/share/themes"
 ## Sherwin taupe = 8C7E78
 ## Gunmetal = 2C3539
 ## Graphite = 577287
-## DarthWound red = A63F3F
-## Papirus black = 505050
-## Papirus grey = 8D8D8D
-## Papirus brown = AE8D6E
-## Papirus green = 84B05F
-## Papirus teal = 009F85
-## Papirus cyan = 00BAD2
-## Papirus blue = 4F92DE
+## https://www.materialui.co/flatuicolors
 
 if [ -w "$Path" ]
 then
-    rm -rf "$Path$ThemeName*"
+  rm -rf "$PathMateria*"
 else
-    sudo rm -rf "$Path$ThemeName*"
+  sudo rm -rf "$PathMateria*"
 fi
 
 wget -O - https://github.com/nana-4/materia-theme/archive/master.tar.gz | tar xz
@@ -89,43 +83,31 @@ cd materia-theme-master
 
 sleep 2s
 
-sed -i "s/Materia/$ThemeName/g" install.sh
-sed -i "/Comment/!s/Materia/$ThemeName/g" src/*.theme
-
 sed -i "s/Roboto, \"M+ 1c\"/$GnomeShellFont/g" src/_sass/gnome-shell/_variables.scss
 sed -i "s/\"M+ 1c\", Roboto/$GnomeShellFont/g" src/_sass/gnome-shell/_variables.scss
 
-sed -i "s/4285F4/$AccentColor/gI" src/_sass/_color-palette.scss
-sed -i "s/4285F4/$AccentColor/gI" src/_sass/_colors.scss
-sed -i "s/4285F4/$AccentColor/gI" src/gnome-shell/assets{,-dark}/*.svg
-sed -i "s/4285F4/$AccentColor/gI" src/gtk/assets.svg
-sed -i "s/4285F4/$AccentColor/gI" src/gtk-2.0/assets{,-dark}.svg
-sed -i "s/4285F4/$AccentColor/gI" src/gtk-2.0/gtkrc{,-dark,-light}
-sed -i "s/4285F4/$AccentColor/gI" src/metacity-1/metacity-theme-2{,-light}.xml
-sed -i "s/4285F4/$AccentColor/gI" src/metacity-1/metacity-theme-3{,-light}.xml
-sed -i "s/4285F4/$AccentColor/gI" src/cinnamon/*.scss
-sed -i "s/4285F4/$AccentColor/gI" src/cinnamon/assets/*.svg
-sed -i "s/4285F4/$AccentColor/gI" src/xfwm4/assets/*.svg
-sed -i "s/4285F4/$AccentColor/gI" src/xfwm4/assets-light/*.svg
-sed -i "s/4285F4/$AccentColor/gI" src/openbox-3/themerc
+sed -i "s/1A73E8/$AccentColorLight/gI" src/_sass/_colors.scss
+sed -i "s/1A73E8/$AccentColorLight/gI" src/gnome-shell/assets/*.svg
+sed -i "s/1A73E8/$AccentColorLight/gI" src/gtk/assets.svg
+sed -i "s/1A73E8/$AccentColorLight/gI" src/gtk-2.0/assets.svg
+sed -i "s/1A73E8/$AccentColorLight/gI" src/gtk-2.0/gtkrc{,-light}
+sed -i "s/1A73E8/$AccentColorLight/gI" src/cinnamon/*.scss
+sed -i "s/1A73E8/$AccentColorLight/gI" src/cinnamon/assets/*.svg
+sed -i "s/1A73E8/$AccentColorLight/gI" src/xfwm4/assets/*.svg
+sed -i "s/1A73E8/$AccentColorLight/gI" src/xfwm4/assets-light/*.svg
 
-sed -i "s/7BAAF7/$AltColor/gI" src/_sass/_color-palette.scss
-sed -i "s/7BAAF7/$AltColor/gI" src/_sass/_colors.scss
-sed -i "s/7BAAF7/$AltColor/gI" src/gnome-shell/assets{,-dark}/*.svg
-sed -i "s/7BAAF7/$AltColor/gI" src/gtk/assets.svg
-sed -i "s/7BAAF7/$AltColor/gI" src/gtk-2.0/assets{,-dark}.svg
-sed -i "s/7BAAF7/$AltColor/gI" src/gtk-2.0/gtkrc{,-dark,-light}
-sed -i "s/7BAAF7/$AltColor/gI" src/metacity-1/metacity-theme-2{,-light}.xml
-sed -i "s/7BAAF7/$AltColor/gI" src/metacity-1/metacity-theme-3{,-light}.xml
-sed -i "s/7BAAF7/$AltColor/gI" src/cinnamon/*.scss
-sed -i "s/7BAAF7/$AltColor/gI" src/cinnamon/assets/*.svg
-sed -i "s/7BAAF7/$AltColor/gI" src/xfwm4/assets/*.svg
-sed -i "s/7BAAF7/$AltColor/gI" src/xfwm4/assets-light/*.svg
-sed -i "s/7BAAF7/$AltColor/gI" src/openbox-3/themerc
+sed -i "s/8AB4F8/$AccentColorDark/gI" src/_sass/_colors.scss
+sed -i "s/8AB4F8/$AccentColorDark/gI" src/gnome-shell/assets-dark/*.svg
+sed -i "s/8AB4F8/$AccentColorDark/gI" src/gtk/assets.svg
+sed -i "s/8AB4F8/$AccentColorDark/gI" src/gtk-2.0/assets-dark.svg
+sed -i "s/8AB4F8/$AccentColorDark/gI" src/gtk-2.0/gtkrc-dark
+sed -i "s/8AB4F8/$AccentColorDark/gI" src/cinnamon/*.scss
+sed -i "s/8AB4F8/$AccentColorDark/gI" src/cinnamon/assets/*.svg
+sed -i "s/8AB4F8/$AccentColorDark/gI" src/xfwm4/assets/*.svg
+sed -i "s/8AB4F8/$AccentColorDark/gI" src/xfwm4/assets-light/*.svg
 
-sed -i "s/EA4335/$GnomeShellClose/gI" src/gnome-shell/assets{,-dark}/window-close{,-active}.svg
-
-sed -i 's/symbolic/regular/g' src/_sass/gnome-shell/_common{-3.18,-3.24,-3.26,-3.28,-3.30,-3.32}.scss
+sed -i "s/D93025/$GnomeShellCloseLight/gI" src/gnome-shell/assets/window-close{,-active}.svg
+sed -i "s/F28B82/$GnomeShellCloseDark/gI" src/gnome-shell/assets-dark/window-close{,-active}.svg
 
 sleep 2s
 
@@ -135,9 +117,9 @@ sleep 2s
 chmod +x install.sh
 if [ -w "$Path" ]
 then
-    ./install.sh -d "$Path"
+  ./install.sh -d "$Path"
 else
-    sudo ./install.sh -d "$Path"
+  sudo ./install.sh -d "$Path"
 fi
 
 sleep 2s
