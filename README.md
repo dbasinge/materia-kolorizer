@@ -48,9 +48,9 @@ chmod +x materia-kolorizer.sh
 
 You don't have to download Materia, the script does everything for you.
 
-If you already have this script installed, remove the old version first.
-
 ## Usage
+
+> If the original Materia theme was already installed from your distro repos, please remove it first.
 
 Modify the script to set your own colors *(only the variables starting with "readonly")*.
 
