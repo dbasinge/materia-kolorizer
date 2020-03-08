@@ -19,7 +19,7 @@ Check [papirus-kolorizer](https://github.com/DarthWound/papirus-kolorizer) and [
 ---
 ---
 
-This bash script provides an easy way to change [Materia GTK theme](https://github.com/nana-4/materia-theme) primary and accent colors.
+This bash script provides an easy way to change [Materia GTK theme](https://github.com/nana-4/materia-theme) accent colors.
 
 ![showcase](kolorizerSW.gif)
 
