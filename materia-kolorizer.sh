@@ -1,7 +1,7 @@
 #!/bin/bash
 
-readonly AccentColorLight="004153"
-readonly AccentColorDark="A3DBE8"
+readonly AccentColorLight="0678AB"
+readonly AccentColorDark="03B9E4"
 readonly GnomeShellCloseLight="820000"
 readonly GnomeShellCloseDark="CC0000"
 readonly GnomeShellFont="Cantarell" #comment lines 86&87 to use default
@@ -25,8 +25,8 @@ readonly Path="/usr/share/themes"
 ## Pop OS yellow = FAA41A
 ## RedHat lightred = CC0000
 ## RedHat darkred = 820000
-## RedHat lightblue = A3DBE8
-## RedHat darkblue = 004153
+## RedHat lightblue = 03B9E4
+## RedHat darkblue = 0678AB
 ## SteamOS green = 5C7E10
 ## SteamOS bluedark = 252C3F
 ## SteamOS bluelight = 6699FF
