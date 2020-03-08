@@ -1,6 +1,6 @@
-:warning: **Upstream Materia changes too often, this script may be outdated when you download it...**
+**Upstream Materia changes often, I'm sorry if the script is outdated when you download it...**
 
----- _(latest sync: 7th march 2020)_
+---- _(latest sync: 7th march 2020 - :heavy_check_mark:)_
 
 ---
 
