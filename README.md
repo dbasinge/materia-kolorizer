@@ -1,6 +1,6 @@
-**Upstream Materia changes often, I'm sorry if the script is outdated when you download it...**
-
----- _(latest sync: 7th march 2020 - :heavy_check_mark:)_
+> **Upstream Materia changes often, I'm sorry if the script is outdated when you download it...**
+> 
+> ---- _(latest sync: 7th march 2020)_
 
 ---
 
