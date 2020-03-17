@@ -1,10 +1,10 @@
 #!/bin/bash
 
-readonly AccentColorLight="0678AB"
-readonly AccentColorDark="03B9E4"
-readonly GnomeShellCloseLight="820000"
-readonly GnomeShellCloseDark="CC0000"
-readonly GnomeShellFont="Cantarell" #comment lines 86&87 to use default
+readonly AccentColorLight="737373"
+readonly AccentColorDark="8C8C8C"
+readonly GnomeShellCloseLight="737373"
+readonly GnomeShellCloseDark="8C8C8C"
+readonly GnomeShellFont="Open Sans" #comment lines 86&87 to use default
 readonly Path="/usr/share/themes"
 
 ### Some colors
@@ -33,6 +33,7 @@ readonly Path="/usr/share/themes"
 ## SUSE green = 02D35F
 ## Ubuntu orange = E95420
 ## Ubuntu purple = 772953
+## Ubuntu grey = AEA79F
 ## Ubuntu Budgie blue = 4D90D6
 ## Ubuntu Budgie red = A34F6D
 ## Ubuntu Budgie slate = 383C4A
@@ -41,8 +42,8 @@ readonly Path="/usr/share/themes"
 ## GNOME Adwaita beige = DBD1C7
 ## GNOME Adwaita blue = 3584E4
 ## KDE Plasma blue = 3DAEE9
-## Windows select blue = 1979CA
-## Windows folder yellow = FFE18C
+## Windows select blue = 1C80E3
+## Windows folder yellow = FFBF00
 ## MiamiVice bluegreen = 0BD3D3
 ## MiamiVice pink = F890E7
 ## Apple website blue = 0070C9
@@ -70,6 +71,14 @@ readonly Path="/usr/share/themes"
 ## Sherwin taupe = 8C7E78
 ## Gunmetal = 2C3539
 ## Graphite = 577287
+## Lounge Tango light = 4287D7
+## Lounge Tango dark = 2962A3
+## Lounge Salsa light = 92548C
+## Lounge Salsa dark = 71416B
+## Lounge Rumba light = 7969C9
+## Lounge Rumba dark = 5445A1
+## Lounge Jive light = 3EA894
+## Lounge Jive dark = 297064
 ## https://www.materialui.co/flatuicolors
 
 if [ -w "$Path" ]
